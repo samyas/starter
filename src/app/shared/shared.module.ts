@@ -4,13 +4,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material/material.module';
 
-import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    FlexLayoutModule,
     ReactiveFormsModule,
     RouterModule,
     MaterialModule
@@ -19,7 +17,6 @@ import {FlexLayoutModule} from '@angular/flex-layout';
   exports: [
     CommonModule,
     FormsModule,
-    FlexLayoutModule,
     ReactiveFormsModule,
     RouterModule,
     MaterialModule
