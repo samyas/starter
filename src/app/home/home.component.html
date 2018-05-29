@@ -1,4 +1,49 @@
-<p>
-  home works!
-</p>
- <router-outlet></router-outlet>
+<!--mat-toolbar color="primary">
+  <button mat-button class="app-menu-button" >
+    <i class="material-icons">menu</i>
+  </button>
+  <span class="title">Angular Material Demo</span>
+</mat-toolbar>
+ <router-outlet></router-outlet-->
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="isHandset ? 'dialog' : 'navigation'"
+    [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
+    [opened]="!(isHandset | async)!.matches">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="./dashboard" routerLinkActive="active">Dashboard</a>
+      <a mat-list-item routerLink="./uploads" routerLinkActive="active">Upload</a>
+      <a mat-list-item>Markers</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="(isHandset | async)!.matches">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Application Title</span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+
+    <!-- Material Button -->
+    <mat-card>
+      <mat-card-content>
+        <h2 class="example-h2">Material Button</h2>
+        <button class="app-button" mat-button>FLAT</button>
+        <button class="app-button" mat-raised-button mat-tooltip="This is a tooltip!">RAISED</button>
+        <button class="app-button" mat-raised-button color="primary">PRIMARY RAISED</button>
+        <button class="app-button" mat-raised-button color="accent">ACCENT RAISED</button>
+      </mat-card-content>
+    </mat-card>
+    <!-- /Material Button -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

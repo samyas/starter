@@ -4,15 +4,15 @@ import { RouterModule } from '@angular/router';
 
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
-import { MatFormFieldModule, MatInputModule, MatButtonModule, MatCheckboxModule} from '@angular/material';
 
+import { SharedModule } from '../shared/shared.module';
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginService } from './login.service';
 import { LoginComponent } from './login.component';
 
 @NgModule({
   imports: [
-    CommonModule, RouterModule, LoginRoutingModule, MatFormFieldModule, MatInputModule
+    CommonModule, RouterModule, LoginRoutingModule, SharedModule
   ],
   declarations: [LoginComponent],
   providers: [ LoginService ]
