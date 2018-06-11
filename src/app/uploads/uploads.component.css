@@ -1,1 +1,20 @@
-/**/
+table {
+  width: 100%;
+}
+.main-fab {
+  position:relative;
+  z-index:20;
+  font-size:30px;
+  top:-35px;
+  left:44px;
+  transform:scale(.88,.88);
+}
+
+.main-fab-grid {
+  position:relative;
+  z-index:20;
+  font-size:30px;
+  top:90px;
+  left:10px;
+  transform:scale(.88,.88);
+}

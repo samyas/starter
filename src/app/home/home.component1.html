@@ -34,35 +34,43 @@
       </button>
       <span>Application Title</span>
 
-      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+      <!--button mat-button [matMenuTriggerFor]="appMenu">Menu</button-->
 
-      <mat-menu #appMenu="matMenu">
-        <button mat-menu-item>Settings</button>
-        <button mat-menu-item>Help</button>
-      </mat-menu>
+      <span class="fill-remaining-space"></span>
 
-
-      <!--button aria-haspopup="true" class="ml-xs mat-icon-button" mat-icon-button="" [matMenuTriggerFor]="appMenu">
+      <button aria-haspopup="true" class="ml-xs mat-icon-button" mat-icon-button="" [matMenuTriggerFor]="appMenu">
         <span class="mat-button-wrapper">
            <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">person</mat-icon>
         </span>
         <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
         <div class="mat-button-focus-overlay"></div>
-      </button-->
+      </button>
+
+      <mat-menu #appMenu="matMenu"  [overlapTrigger]="false">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voicemail</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+      </mat-menu>
 
     </mat-toolbar>
-    <router-outlet></router-outlet>
-
-    <!-- Material Button -->
     <mat-card>
       <mat-card-content>
-        <h2 class="example-h2">Material Button</h2>
-        <button class="app-button" mat-button>FLAT</button>
-        <button class="app-button" mat-raised-button mat-tooltip="This is a tooltip!">RAISED</button>
-        <button class="app-button" mat-raised-button color="primary">PRIMARY RAISED</button>
-        <button class="app-button" mat-raised-button color="accent">ACCENT RAISED</button>
-      </mat-card-content>
-    </mat-card>
-    <!-- /Material Button -->
+    <router-outlet></router-outlet>
+
+     <!-- Material Fab-->
+ <button mat-fab class="app-fab">
+    <mat-icon>add</mat-icon>
+</button>
+  </mat-card-content>
+</mat-card>
   </mat-sidenav-content>
 </mat-sidenav-container>

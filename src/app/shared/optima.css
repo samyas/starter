@@ -1,4 +1,4 @@
-Theme Name: Optima Angular 5 Admin Template
+/*Theme Name: Optima Angular 5 Admin Template
 Version: 1.0
 Author: TrendSetter Themes
 
@@ -14,7 +14,7 @@ Author: TrendSetter Themes
     1.4 Main Header
     1.5 Main Panel
     1.6 Sessions
-    
+
 ---------------
 2. Components
 ---------------
@@ -26,7 +26,7 @@ Author: TrendSetter Themes
     3.3 App Variables
     3.4 Mixin
     3.5 Material
-    
+
 ---------------
 3. Utilities
 ---------------*/
@@ -3843,7 +3843,7 @@ body .login-session{
     transition:box-shadow .28s cubic-bezier(.4,0,.2,1),-webkit-box-shadow .28s cubic-bezier(.4,0,.2,1);
     display:block;
     position:relative;
-    border-radius:2px 
+    border-radius:2px
     /** * Shared Styles */
     /** * Header Styles */
     /** * Body Styles */
@@ -3970,7 +3970,7 @@ body .login-session{
 }
 .app-dark .ngx-datatable.material{
     background:#424242;
-    color:#fff 
+    color:#fff
     /** * Header Styles */
     /** * Footer Styles */
 }
@@ -4682,7 +4682,7 @@ body .mat-card{
     border-radius:2px;
     -webkit-box-shadow:1.5px 2.6px 24px 0 rgba(0,35,136,.08)!important;
     box-shadow:1.5px 2.6px 24px 0 rgba(0,35,136,.08)!important;
-    color:rgba(0,0,0,.87) 
+    color:rgba(0,0,0,.87)
     /* Temporary fix */
     /* https://github.com/angular/material2/issues/3131 */
     /*********/
@@ -6636,4 +6636,4 @@ a.mat-text-accent:focus,a.mat-text-accent:hover{
     padding:0 1rem;
     margin-bottom:2rem
 }
-/*! 
+/*!
